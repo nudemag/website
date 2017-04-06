@@ -53,21 +53,23 @@ header {
   /*border: 1px solid red;*/
 }
 
-nav {
+nav.menu {
   display: inline-block;
   float: right;
 }
 
-nav a {
+nav.menu a {
   text-decoration: none;
   line-height: 40px;
   font-weight: 300;
   padding: 10px 20px;
   border-top: 2px solid transparent;
   text-transform: uppercase;
+  transition: all 0.3s;
 }
 
-nav a:hover {
+nav.menu a:hover {
+  /*transition: all 0.0s;*/
   border-top-color: black;
 }
 
