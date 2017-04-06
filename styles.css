@@ -87,7 +87,6 @@ nav.social {
   display: inline-block;
   width: 320px;
   margin: 20px;
-  /*background: yellow;*/
 }
 
 .issue img {
@@ -99,6 +98,10 @@ nav.social {
   opacity: 0.7;
   line-height: 2;
   border: none;
+}
+
+.issue time {
+  opacity: 0.6;
 }
 
 /* Utility classes */
