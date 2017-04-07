@@ -75,6 +75,12 @@ nav.social {
   display: none;
 }
 
+/* Content */
+
+#content {
+  text-align: center;
+}
+
 /* Issues */
 
 .issues {
@@ -106,7 +112,56 @@ nav.social {
 
 .issue abbr {
   float: right;
-  opacity: 0.3;
+  opacity: 0.5;
+}
+
+/* Forms */
+
+form {
+  display: inline-block;
+  width: 480px;
+  margin: 20px auto;
+  position: relative;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  padding: 10px 5px;
+  border: 1px solid rgba(0,0,0,0.3);
+  font-size: 1em;
+}
+
+label {
+  line-height: 2;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+fieldset {
+  border: none;
+  margin: 15px 0;
+  padding: 0;
+  text-align: left;
+}
+
+button, input[type=submit] {
+  background: black;
+  color: white;
+  /*background: white;
+  color: black;
+  border: 2px solid black;*/
+  line-height: 2.5;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.faint {
+  opacity: 0.5;
 }
 
 /* Mobile Styles (Tablet, Phone) */
@@ -114,6 +169,10 @@ nav.social {
 @media (max-width: 640px) {
   body {
     font-size: 1em;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    text-align: center;
   }
 
   header {
