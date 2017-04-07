@@ -1,16 +1,19 @@
 <html>
   <head>
     <title>Nude Magazine</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+    <!-- Mobile-friendly layout -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
     <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?c2sn1i">
     <link href="styles.css" rel="stylesheet">
 
-    <script>
-      // document.addEventListener('click', function(event) {
-      //   document.body.classList.toggle('night')
-      // })
-    </script>
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/vendor/sniffr.min.js"></script>
+    <script src="scripts/app.js"></script>
   </head>
   <body>
 
@@ -210,12 +213,12 @@
 
       <h2 id="submit">Drop us a line</h2>
 
-      <form action="https://formspree.io/xqavzvrx" method="POST">
+      <form action="https://formspree.io/xqavzvrx" method="POST" id="contact">
 
         <!-- formspree config; https://formspree.io/ -->
         <input type="hidden" name="_next" value="/?thanks" />
-        <input type="hidden" name="_subject" value="Submission" />
-        <input type="hidden" name="_cc" value="nudemags@gmail.com" />
+        <input type="hidden" name="_subject" value="NUDE Mag Submission" />
+        <input type="hidden" name="_cc" value="zeke@sikelianos.com" />
         <input type="text" name="_gotcha" style="display:none" />
 
         <fieldset>
@@ -256,9 +259,16 @@
         <fieldset>
           <label>
             How did you hear about us?
-            <textarea name="how"></textarea>
+            <textarea name="how_they_knew"></textarea>
           </label>
         </fieldset>
+
+        <!-- Hidden fields, updated with data from ipinfo.io -->
+        <input type="hidden" name="city" />
+        <input type="hidden" name="state" />
+        <input type="hidden" name="zip" />
+        <input type="hidden" name="ip" />
+        <input type="hidden" name="loc" />
 
         <input type="submit" value="Submit">
       </form>
