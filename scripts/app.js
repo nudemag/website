@@ -7,7 +7,7 @@ function init () {
 }
 
 function detectLocation () {
-  $.getJSON('http://ipinfo.io', function (ipinfo) {
+  $.getJSON('https://ipinfo.io', function (ipinfo) {
     var fields = ['city', 'state', 'zip', 'ip', 'loc']
     fields.forEach(function (field) {
       var input = document.querySelector('#contact input[name=' + field + ']')
