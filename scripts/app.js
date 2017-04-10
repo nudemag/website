@@ -1,16 +1,25 @@
 NodeList.prototype.forEach = Array.prototype.forEach
+var $form
 
 $(init)
 
 function init () {
+  $form = document.querySelector('#contact')
   detectLocation()
+  detectSystem()
 }
 
 function detectLocation () {
   $.getJSON('https://ipinfo.io', function (ipinfo) {
-    var form = document.querySelector('#contact')
-    form.querySelectorAll('[data-source]').forEach(function (input) {
+    $form.querySelectorAll('[data-source]').forEach(function (input) {
       input.value = ipinfo[input.dataset.source]
     })
   })
+}
+
+function detectSystem () {
+  $form.querySelector('[name=browser]').value = Sniffr.browser.name
+  $form.querySelector('[name=browser_version]').value = Sniffr.browser.versionString
+  $form.querySelector('[name=os]').value = Sniffr.os.name
+  $form.querySelector('[name=os_version]').value = Sniffr.os.versionString
 }
