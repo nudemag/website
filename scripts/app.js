@@ -1,4 +1,4 @@
-var ipinfo
+NodeList.prototype.forEach = Array.prototype.forEach
 
 $(init)
 
@@ -8,10 +8,9 @@ function init () {
 
 function detectLocation () {
   $.getJSON('https://ipinfo.io', function (ipinfo) {
-    var fields = ['city', 'state', 'zip', 'ip', 'loc']
-    fields.forEach(function (field) {
-      var input = document.querySelector('#contact input[name=' + field + ']')
-      input.value = ipinfo[field]
+    var form = document.querySelector('#contact')
+    form.querySelectorAll('[data-source]').forEach(function (input) {
+      input.value = ipinfo[input.dataset.source]
     })
   })
 }
