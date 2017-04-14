@@ -6,6 +6,7 @@ body {
   color: black;
   transition: all 0.3s;
   padding: 0;
+  margin: 0;
 }
 
 body.night {
@@ -91,8 +92,8 @@ nav.social {
 
 .issue {
   display: inline-block;
-  width: 320px;
-  margin: 20px;
+  width: 280px;
+  margin: 20px 40px;
 }
 
 .issue img {
@@ -104,6 +105,7 @@ nav.social {
   opacity: 0.7;
   line-height: 2;
   border: none;
+  text-align: left;
 }
 
 .issue time {
@@ -162,6 +164,16 @@ button, input[type=submit] {
 
 .faint {
   opacity: 0.5;
+}
+
+/* Spreads */
+
+.slick-slide img {
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 /* Mobile Styles (Tablet, Phone) */
