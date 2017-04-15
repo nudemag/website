@@ -118,8 +118,8 @@ nav.social {
 /* Forms */
 
 form {
-  display: inline-block;
-  width: 480px;
+  display: block;
+  max-width: 480px;
   margin: 20px auto;
   position: relative;
 }
