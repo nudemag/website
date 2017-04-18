@@ -133,6 +133,7 @@ form {
   display: block;
   max-width: 480px;
   margin: 20px auto;
+  padding: 20px;
   position: relative;
 }
 
