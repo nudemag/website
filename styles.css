@@ -31,12 +31,17 @@ a {
 }
 
 header {
-  width: 1086px;
+  max-width: 1086px;
   margin: 0 auto;
   padding: 20px;
   float: none;
   clear: both;
   overflow: hidden;
+}
+
+footer {
+  padding: 100px 0;
+  text-align: center;
 }
 
 .logo {
@@ -52,8 +57,7 @@ header {
   height: 100%;
 }
 
-nav.menu {
-  display: inline-block;
+header nav.menu {
   float: right;
 }
 
@@ -80,6 +84,12 @@ nav.social {
 
 #content {
   text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 /* Issues */
@@ -168,13 +178,27 @@ button, input[type=submit] {
 
 /* Spreads */
 
-.slick-slide img {
+.spreads div {
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.spreads img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+/*.slick-slide img {
   max-width: 100%;
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
-}
+}*/
 
 /* Mobile Styles (Tablet, Phone) */
 
@@ -199,7 +223,8 @@ button, input[type=submit] {
     width: 200px;
   }
 
-  nav.menu {
+  header nav.menu {
+    float: none;
     margin-top: 30px;
   }
 

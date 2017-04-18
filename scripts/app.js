@@ -7,7 +7,6 @@ function init () {
   $form = document.querySelector('#contact')
   detectLocation()
   detectSystem()
-  spread()
 }
 
 function detectLocation () {
@@ -23,14 +22,4 @@ function detectSystem () {
   $form.querySelector('[name=browser_version]').value = Sniffr.browser.versionString
   $form.querySelector('[name=os]').value = Sniffr.os.name
   $form.querySelector('[name=os_version]').value = Sniffr.os.versionString
-}
-
-function spread () {
-  $('#spreads').slick({
-    autoplay: true,
-    fade: true,
-    // infinite: true,
-    // speed: 1000,
-    autoplaySpeed: 2000
-  })
 }
