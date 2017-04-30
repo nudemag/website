@@ -30,6 +30,15 @@ a {
   text-decoration: none;
 }
 
+p {
+  padding: 15px 20px;
+  font-size: 1.3em;
+}
+
+p a {
+  text-decoration: underline;
+}
+
 header {
   max-width: 1086px;
   margin: 0 auto;
