@@ -30,15 +30,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  padding: 15px 20px;
-  font-size: 1.3em;
-}
-
-p a {
-  text-decoration: underline;
-}
-
 header {
   max-width: 1086px;
   margin: 0 auto;
@@ -86,13 +77,36 @@ nav.menu a:hover {
 }
 
 nav.social {
-  display: none;
+  margin: 30px;
+  font-size: 1.5em;
+}
+
+nav.social a {
+  transition: all 0.2s;
+  padding: 15px;
+  opacity: 0.4;
+}
+nav.social a:hover {
+ opacity: 1;
 }
 
 /* Content */
 
 #content {
   text-align: center;
+}
+
+#content > p {
+  display: inline-block;
+  text-align: left;
+  max-width: 600px;
+  padding: 15px 20px;
+  font-size: 1.3em;
+  line-height: 1.4;
+}
+
+#content > p a {
+  text-decoration: underline;
 }
 
 h2 {
@@ -129,6 +143,7 @@ h2 {
 
 .issue time {
   opacity: 0.6;
+  display: none;
 }
 
 .issue abbr {
