@@ -98,7 +98,7 @@ nav.social a:hover {
 
 #content > p {
   display: inline-block;
-  text-align: left;
+  text-align: justify;
   max-width: 600px;
   padding: 15px 20px;
   font-size: 1.3em;
@@ -185,16 +185,21 @@ fieldset {
   text-align: left;
 }
 
-button, input[type=submit] {
+button, input[type=submit], a.button {
   background: black;
   color: white;
-  /*background: white;
-  color: black;
-  border: 2px solid black;*/
   line-height: 2.5;
   font-size: 1.2em;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+a.button {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none !important;
+  padding: 20px;
 }
 
 .faint {
