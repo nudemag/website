@@ -197,9 +197,16 @@ button, input[type=submit], a.button {
 a.button {
   background: white;
   color: black;
-  border: 2px solid black;
+  font-size: 1.1em;
+  border: 1px solid black;
   text-decoration: none !important;
-  padding: 20px;
+  padding: 15px;
+  transition: all 0.2s;
+}
+
+a.button:hover {
+  background: black;
+  color: white;
 }
 
 .faint {
