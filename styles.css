@@ -109,6 +109,15 @@ nav.social a:hover {
   text-decoration: underline;
 }
 
+.centered-container {
+  text-align: center;
+}
+
+.centered {
+  max-width: 800px;
+  display: inline-block;
+}
+
 h2 {
   font-size: 2em;
   padding-top: 60px;
