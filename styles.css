@@ -293,13 +293,13 @@ a.button:hover {
     margin-top: 30px;
   }
 
-  .issues {
+  .issues, .slides {
     width: 100%;
     /*background: yellow;*/
     text-align: center;
   }
 
-  .issue {
+  .issue, .slide {
     display: inline-block;
     width: 80%;
   }
