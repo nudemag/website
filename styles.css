@@ -298,14 +298,19 @@ a.button:hover {
     margin-top: 30px;
   }
 
-  .issues, .slides {
+  .issues {
     width: 100%;
-    /*background: yellow;*/
     text-align: center;
   }
 
-  .issue, .slide {
+  .issue {
     display: inline-block;
-    width: 80%;
+    width: 80%; 
+  }
+
+  .slides {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
   }
 }
