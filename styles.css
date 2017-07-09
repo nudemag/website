@@ -164,14 +164,19 @@ h2 {
 
 .slides {
   margin: 30px auto;
-  width: 1086px;
-  /*background: red;*/
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 3;
+  -moz-column-gap: 0px;
+  column-count: 3;
+  column-gap: 0px;
+  max-width: none;
 }
 
 .slide {
   display: inline-block;
-  width: 280px;
-  margin: 20px 40px;
+  max-width: 800px;
+  margin: 20px 20px;
 }
 
 .slide img {
