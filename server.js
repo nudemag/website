@@ -28,6 +28,7 @@ app.use(express.static(__dirname))
 // Routes
 const routes = require('./routes')
 app.get('/', routes.home)
+app.get('/music', routes.music)
 app.get('/:permalink', routes.issue)
 
 if (!module.parent) {
