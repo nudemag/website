@@ -1,0 +1,104 @@
+<div class="spreads">
+    {{#each spreads}}  
+    <div>
+      <img src="images/spreads/{{this.number}}.jpg" srcset="images/spreads/{{this.number}}-640.jpg 640w, images/spreads/{{this.number}}.jpg 1280w">
+    </div>
+  {{/each}}
+</div>
+
+<h2 id="about">What is NUDE?</h2>
+
+<p>
+  When the idea to launch NUDE came about, the concept was clear.
+  It would be a publication that shed light on not just one aspect of the industry,
+  but would feature everyone behind the scenes as well. Creatives such as
+  models, stylists, designers, makeup artists and more would be included.
+  It would showcase an array of people who strive for what they believe
+  in and do what they love. It is my mission to give you a glimpse into
+  the lives of those individuals, while also giving them a platform to
+  showcase their work and talent. This is only the beginning.
+</p>
+
+<h2 id="issues">We've got issues.</h2>
+
+<div class="issues">
+  {{#each issues}}  
+    <a href="{{#if this.permalink}} {{this.permalink}} {{else}} {{this.blurb_url}} {{/if}}" class="issue">
+      <img src="images/covers/{{this.number}}.jpg">
+      <p>
+        {{this.title}}
+        <time>{{this.date}}</time>
+        <abbr>{{this.number}}</abbr>
+      </p>
+    </a>
+  {{/each}}
+</div>
+
+<h2 id="submit">Drop us a line.</h2>
+
+<form action="https://formspree.io/xeoyoqqx" method="POST" id="contact">
+
+  <!-- formspree config; https://formspree.io/ -->
+  <input type="hidden" name="_next" value="/?thanks" />
+  <input type="hidden" name="_subject" value="NUDE Mag Submission" />
+  <input type="hidden" name="_cc" value="nudemags@gmail.com" />
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <fieldset>
+    <label>
+      Name
+      <input type="text" name="name" required>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label class="required">
+      Email
+      <input type="email" name="email" required autocapitalize="off" autocorrect="off" autocomplete="off">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label>
+      Website
+      <input type="text" name="website" autocapitalize="off" autocorrect="off" autocomplete="off">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label>
+      Instagram username
+      <input type="text" name="instagram" autocapitalize="off" autocorrect="off" autocomplete="off">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label>
+      Your message
+      <textarea name="message"></textarea>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label>
+      How did you hear about us?
+      <textarea name="how_they_knew"></textarea>
+    </label>
+  </fieldset>
+
+  <!-- Hidden fields, updated with data from ipinfo.io -->
+  <input type="hidden" data-source='postal' name='postal_guess' />
+  <input type='hidden' data-source='city' name='city_guess' />
+  <input type='hidden' data-source='region' name='region_guess' />
+  <input type='hidden' data-source='country' name='country_guess' />
+  <input type='hidden' data-source='org' name='org_guess' />
+  <input type='hidden' data-source='ip' name='ip' />
+  <input type='hidden' data-source='loc' name='coordinates' />
+
+  <input type='hidden' name='browser' />
+  <input type='hidden' name='browser_version' />
+  <input type='hidden' name='os' />
+  <input type='hidden' name='os_version' />
+
+  <input type='submit' value='Submit'>
+</form>
