@@ -27,9 +27,13 @@ app.use(express.static(__dirname))
 
 // Routes
 const routes = require('./routes')
-app.get('/', routes.home)
-app.get('/music', routes.music)
-app.get('/:permalink', routes.issue)
+app.get('/', (req, res) => res.redirect(302, 'https://raylene-pereyra-zyna.squarespace.com'))
+app.get('/shop', (req, res) => res.redirect(302, 'https://raylene-pereyra-zyna.squarespace.com/shop'))
+app.get('/blog', (req, res) => res.redirect(302, 'https://raylene-pereyra-zyna.squarespace.com/blog'))
+app.get('*', (req, res) => res.redirect(302, 'https://raylene-pereyra-zyna.squarespace.com'))
+// app.get('/', routes.home)
+// app.get('/music', routes.music)
+// app.get('/:permalink', routes.issue)
 
 if (!module.parent) {
   app.listen(port, () => {
